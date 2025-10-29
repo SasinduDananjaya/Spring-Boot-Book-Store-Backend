@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Store Manager</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h1>📚 Book Store Manager</h1>
+        <p class="subtitle">Manage your book inventory with ease</p>
+    </div>
+
+    <div class="controls">
+        <div class="search-bar">
+            <input type="text" class="search-input" id="searchInput" placeholder="Search books by title, author, or price...">
+            <button class="btn btn-primary" onclick="openAddModal()">+ Add New Book</button>
+        </div>
+    </div>
+
+    <div id="booksContainer" class="books-grid">
+        <div class="loading">Loading books...</div>
+    </div>
+</div>
+
+<!-- Add/Edit Modal -->
+<div id="bookModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header" id="modalTitle">Add New Book</div>
+        <form id="bookForm">
+            <input type="hidden" id="bookId">
+
+            <div class="form-group">
+                <label class="form-label" for="title">Title</label>
+                <input type="text" class="form-input" id="title" required>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="author">Author</label>
+                <input type="text" class="form-input" id="author" required>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="price">Price ($)</label>
+                <input type="number" class="form-input" id="price" step="0.01" required>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="imageUrl">Image URL</label>
+                <input type="text" class="form-input" id="imageUrl" placeholder="https://example.com/book-cover.jpg">
+            </div>
+
+            <div class="modal-actions">
+                <button type="button" class="btn btn-cancel" onclick="closeModal()">Cancel</button>
+                <button type="submit" class="btn btn-save">Save Book</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Notification -->
+<div id="notification" class="notification"></div>
+
+<script src="/js/app.js"></script>
+</body>
+</html>
