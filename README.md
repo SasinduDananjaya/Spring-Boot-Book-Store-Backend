@@ -52,12 +52,12 @@ Create a new file application.properties in src/main/resources/
 Add configurations like in application.properties.example file
 ```
 
-### 3. Build and Run the Project
+### 4. Build and Run the Project
 ```bash
 Run directly from your IDE by executing the main application class (BookStoreApplication)
 ```
 
-### 4. Access the Application
+### 5. Access the Application
 ```bash
 Open your web browser and navigate to: http://localhost:8080
 ```
